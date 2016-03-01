@@ -1,6 +1,8 @@
 package it.xpug.woodysmart.hello;
 
 import static org.junit.Assert.*;
+
+import it.xpug.toolkit.web.TemplateView;
 import it.xpug.woodysmart.util.*;
 
 import org.junit.*;

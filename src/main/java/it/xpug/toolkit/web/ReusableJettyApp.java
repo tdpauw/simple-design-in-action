@@ -9,6 +9,7 @@ import javax.servlet.http.*;
 import org.mortbay.jetty.*;
 import org.mortbay.jetty.handler.*;
 import org.mortbay.jetty.servlet.*;
+import org.mortbay.resource.Resource;
 
 public class ReusableJettyApp {
 
@@ -22,9 +23,11 @@ public class ReusableJettyApp {
 	public void start(int port, String resourceBase) {
 		server = new Server(port);
 		try {
+			ResourceHandler resourceHandler = new ResourceHandler();
+			resourceHandler.setBaseResource(Resource.newClassPathResource(resourceBase));
 			HandlerList handlers = new HandlerList();
 			handlers.setHandlers(new Handler[] {
-				new StaticFilesHandler(resourceBase),
+				resourceHandler,
 				servletHandler(),
 				new DefaultHandler()
 			});

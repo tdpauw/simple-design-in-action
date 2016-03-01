@@ -3,6 +3,7 @@ package it.xpug.toolkit.web;
 import java.io.*;
 import java.util.*;
 
+import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.*;
 
 public class TemplateView {
@@ -26,7 +27,9 @@ public class TemplateView {
 	public String toHtml() {
 		try {
 			Configuration configuration = new Configuration(new Version("2.3.20"));
-			configuration.setDirectoryForTemplateLoading(new File(templateDir));
+//			configuration.setDirectoryForTemplateLoading(new File(templateDir));
+//			configuration.setClassForTemplateLoading(this.getClass(), "templates");
+			configuration.setTemplateLoader(new ClassTemplateLoader(getClass(), "/templates"));
 			Template template = configuration.getTemplate(templateName);
 
 			StringWriter writer = new StringWriter();
