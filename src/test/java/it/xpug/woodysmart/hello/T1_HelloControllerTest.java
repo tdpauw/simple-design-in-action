@@ -6,7 +6,8 @@ import javax.servlet.http.*;
 
 import org.junit.*;
 
-public class T1_HelloController_UnitTest {
+public class T1_HelloControllerTest
+{
 
 	private HttpServletRequest request = mock(HttpServletRequest.class);
 	private HelloView view = mock(HelloView.class);
@@ -43,7 +44,4 @@ public class T1_HelloController_UnitTest {
 		verifyNoMoreInteractions(view);
 	}
 
-	/*
-	 * Now start solving T2_HelloView_UnitTest !
-	 */
 }

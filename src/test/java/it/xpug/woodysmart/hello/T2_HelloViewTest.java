@@ -7,7 +7,8 @@ import it.xpug.woodysmart.util.*;
 
 import org.junit.*;
 
-public class T2_HelloView_UnitTest {
+public class T2_HelloViewTest
+{
 
 	private FakeHttpServletResponse response = new FakeHttpServletResponse();
 	private HelloView helloView = new HelloView(response);
@@ -34,13 +35,4 @@ public class T2_HelloView_UnitTest {
 		assertEquals("Method not allowed", response.getBody());
 		assertEquals(405, response.getStatusCode());
     }
-
-	/*
-	 * Well done! What to do now:
-	 *
-	 * a) Run the application and check that it works
-	 * b) Uu-ignore the T0_HelloWorld_AcceptanceTest and check that it works
-	 * c) Open T4_OrdersView_UnitTest and un-ignore the first test
-	 *
-	 */
 }
