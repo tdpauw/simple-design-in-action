@@ -24,10 +24,9 @@ public class ReusableJettyApp {
 		server = new Server(port);
 		try {
 			ResourceHandler resourceHandler = new ResourceHandler();
-			resourceHandler.setBaseResource(Resource.newClassPathResource(resourceBase));
 			HandlerList handlers = new HandlerList();
 			handlers.setHandlers(new Handler[] {
-				resourceHandler,
+				new StaticFilesHandler(Resource.newClassPathResource(resourceBase)),
 				servletHandler(),
 				new DefaultHandler()
 			});
@@ -53,8 +52,8 @@ public class ReusableJettyApp {
 	}
 
 	private final class StaticFilesHandler extends ResourceHandler {
-		private StaticFilesHandler(String resourceBase) {
-			setResourceBase(resourceBase);
+		private StaticFilesHandler(Resource resourceBase) {
+			setBaseResource(resourceBase);
 	        setWelcomeFiles(new String[]{ "index.html" });
 		}
 
