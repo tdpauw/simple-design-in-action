@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.xpug</groupId>
   <artifactId>simple-design-in-action</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <description>Simple Design in Action: Woody's Mart - Templates for Views</description>
 
   <properties>
@@ -14,6 +14,7 @@
 
   <build>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
