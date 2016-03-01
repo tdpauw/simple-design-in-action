@@ -53,14 +53,6 @@
               <releaseVersionFormat>{{ api_version }}-{{ timestamp('YYYYMMddHHmm') }}.${revision}</releaseVersionFormat>
             </configuration>
           </execution>
-          <execution>
-            <goals>
-              <goal>version</goal>
-            </goals>
-            <configuration>
-              <outputTemplate>PROJECT_VERSION={{ version }}</outputTemplate>
-            </configuration>
-          </execution>
         </executions>
       </plugin>
       <plugin>
