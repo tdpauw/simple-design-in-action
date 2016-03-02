@@ -15,12 +15,12 @@
     <dependency>
       <groupId>it.xpug</groupId>
       <artifactId>simple-design-in-action-core</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>[0,)</version>
     </dependency>
     <dependency>
       <groupId>it.xpug</groupId>
       <artifactId>simple-design-in-action-core</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>[0,)</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
