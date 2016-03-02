@@ -1,12 +1,16 @@
-package it.xpug.woodysmart.orders;
+package woodysmart.orders;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
-import it.xpug.woodysmart.util.*;
+import it.xpug.woodysmart.util.TestWithALiveServer;
+import org.junit.Ignore;
+import org.junit.Test;
 
-import org.junit.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.not;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
-public class T5_ReceiveAndShipOneOrderIT extends TestWithALiveServer {
+public class T5_ReceiveAndShipOneOrderIT extends TestWithALiveServer
+{
 
 	@Test
 	public void noOrdersToBeShipped() throws Exception {

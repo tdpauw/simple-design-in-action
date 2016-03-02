@@ -1,14 +1,14 @@
-package it.xpug.woodysmart.hello;
+package woodysmart.hello;
 
 
+import it.xpug.woodysmart.util.TestWithALiveServer;
+import org.junit.Test;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
-import it.xpug.woodysmart.util.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.assertThat;
 
-import org.junit.*;
-
-public class T0_HelloWorldIT extends TestWithALiveServer {
+public class T0_HelloWorldIT extends TestWithALiveServer
+{
 
 	@Test
 	public void helloWorld() throws Exception {
