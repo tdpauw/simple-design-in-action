@@ -7,5 +7,5 @@ node {
     def mvnHome = tool 'M3'
     sh "${mvnHome}/bin/mvn validate release-candidate:updateVersion -Drevision=${revision}"
     stage 'Commit Build'
-    sh "${mvnHome}/bin/mvn verify"
+    sh "${mvnHome}/bin/mvn clean install"
 }
