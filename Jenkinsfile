@@ -10,4 +10,6 @@ node {
     currentBuild.displayName = pom.version
     stage 'Commit Build'
     sh "${mvnHome}/bin/mvn clean install"
+    stage 'Code Quality'
+    sh "${mvnHome}/bin/mvn sonar:sonar -Dsonar.host.url=http://192.168.99.100:9000 -Dsonar.jdbc.url=jdbc:h2:tcp://192.168.99.100/sonar"
 }
