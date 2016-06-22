@@ -1,11 +1,13 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
          xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>it.xpug</groupId>
   <artifactId>simple-design-in-action</artifactId>
   <packaging>pom</packaging>
   <version>0.1.0-SNAPSHOT</version>
   <description>Simple Design in Action: Woody's Mart - Templates for Views</description>
+
   <modules>
     <module>simple-design-in-action-acceptance</module>
     <module>simple-design-in-action-core</module>
@@ -13,10 +15,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
     <revision>0000000</revision>
-    <sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
   </properties>
 
   <dependencies>
