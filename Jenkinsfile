@@ -11,7 +11,9 @@ node {
 
     stage 'Commit Build'
     mvn "clean install -pl simple-design-in-action-core -am"
-    step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: './simple-design-in-action-core/target/surefire-reports/TEST-*.xml'])
+    step([$class: 'JUnitResultArchiver', testResults: './simple-design-in-action-core/target/surefire-reports/TEST-*.xml'])
+    step([$class: 'ArtifactArchiver', artifacts: './simple-design-in-action-core/target/*.jar', excludes: null, onlyIfSuccessful: true])
+
 
     stage 'Code Quality'
     mvn "sonar:sonar -Dsonar.host.url=http://192.168.99.100:9000 -Dsonar.jdbc.url=jdbc:h2:tcp://192.168.99.100/sonar"
